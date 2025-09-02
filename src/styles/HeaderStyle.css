@@ -1,0 +1,29 @@
+/* Header container */
+header {
+  background-color: #fff; /* White background */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Light shadow */
+}
+
+/* Navigation container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Space between logo and title */
+}
+
+/* Logo image */
+.nav-container img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+/* Heading text */
+.nav-container h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333; /* Dark grey text */
+  margin: 0;
+}
