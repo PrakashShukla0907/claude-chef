@@ -10,7 +10,6 @@ export default function MainSection() {
   const [ingredients, setNewingredients] = React.useState([]);
   const [recipe, setRecipe] = React.useState("");
   const [loader,setLoader]=React.useState(false)
-  const [removeIngredients,setRemoveIngredients]=React.useState(true)
   
   const recipeSection = React.useRef(null)
   
@@ -23,7 +22,6 @@ export default function MainSection() {
   async function getRecipe() {
     setRecipe("")
     const recipeMarkdown = await getRecipeFromMistral(ingredients)
-    setRemoveIngredients(false)
     setRecipe(recipeMarkdown)
     setLoader(false)
   }
@@ -33,16 +31,15 @@ export default function MainSection() {
     const newIngredents = formData.get("ingredient");
     if(newIngredents !==""){
       setNewingredients((prevItem) => [...prevItem, newIngredents]);
-      setRemoveIngredients(true)
     }else{
       alert("Please enter an ingrident")
     }
   }
 
   function removeIngredient(itemToRemove) {
-    {removeIngredients && setNewingredients((prev) =>
+    setNewingredients((prev) =>
       prev.filter((item) => item !== itemToRemove)
-    );}
+    );
   }
 
   return (

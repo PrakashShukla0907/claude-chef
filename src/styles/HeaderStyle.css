@@ -1,8 +1,9 @@
 /* Header container */
 header {
-  background-color: #fff; /* White background */
+  background-color: #1e1e2f; /* Dark navy/charcoal */
   padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Light shadow */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7); /* Deeper shadow for contrast */
+  border-bottom: 1px solid #2e2e40; /* Subtle border */
 }
 
 /* Navigation container */
@@ -10,7 +11,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px; /* Space between logo and title */
+  gap: 15px;
 }
 
 /* Logo image */
@@ -18,12 +19,20 @@ header {
   height: 40px;
   width: 40px;
   object-fit: contain;
+  filter: brightness(0) invert(1); /* Ensures logos with dark colors stay visible */
 }
 
 /* Heading text */
 .nav-container h1 {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333; /* Dark grey text */
+  color: #f5f5f5; /* Light text for contrast */
   margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Optional hover effect for better interactivity */
+header:hover {
+  background-color: #2a2a3d;
+  transition: background-color 0.3s ease;
 }

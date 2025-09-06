@@ -24,7 +24,7 @@ const StyledWrapper = styled.div`
   }
 
   .loader .circle {
-    --color: #333;
+    --color: #2a3ee0;
     --dim: 1.2rem;
     width: var(--dim);
     height: var(--dim);

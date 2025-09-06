@@ -4,13 +4,19 @@ export default function IngredientsList(props) {
   const ingredients = props.listItem;
 
   const ListItems = ingredients.map((item) => {
-    return <li key={item}><button
+  return (
+    <li key={item}>
+      <span>{item}</span>   {/* item text */}
+      <button
         className="remove-btn"
-        onClick={() => props.removeIngredient(item)} // ✅ remove ingredient
+        onClick={() => props.removeIngredient(item)}
       >
-      {item}
-      </button></li>;
-  });
+        ✖
+      </button>
+    </li>
+  );
+});
+
 
   return (
     ListItems.length > 0 && (
