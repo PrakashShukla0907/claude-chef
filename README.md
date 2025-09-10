@@ -35,8 +35,7 @@ VITE_HF_API_KEY=your_api_key_here
 
 ### 4. Run the App
 ```bash
-Copy code
-npm start
+npm run dev
 ```
 
 ## 🛠️ Tech Stack
